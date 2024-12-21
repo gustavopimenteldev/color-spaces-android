@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Color Spaces</string>
+    <string name="title_spaces">Spaces</string>
+    <string name="title_lights">Lights</string>
+    <string name="title_palettes">Palettes</string>
+    <string name="title_guess">Guess</string>
+    <string name="title_learn">Learn</string>
+    <string name="initial_color" translatable="false">#555555</string>
+    <string name="select_color">Select Color</string>
+</resources>

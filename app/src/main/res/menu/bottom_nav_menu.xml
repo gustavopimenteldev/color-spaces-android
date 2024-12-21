@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_spaces"
+        android:icon="@drawable/ic_spaces_24"
+        android:title="@string/title_spaces" />
+
+    <item
+        android:id="@+id/navigation_palettes"
+        android:icon="@drawable/ic_palettes_24"
+        android:title="@string/title_palettes" />
+
+    <item
+        android:id="@+id/navigation_lights"
+        android:icon="@drawable/ic_lights_24"
+        android:title="@string/title_lights" />
+
+    <item
+        android:id="@+id/navigation_guess"
+        android:icon="@drawable/ic_guess_24"
+        android:title="@string/title_guess" />
+
+    <item
+        android:id="@+id/navigation_learn"
+        android:icon="@drawable/ic_learn_24"
+        android:title="@string/title_learn" />
+</menu>

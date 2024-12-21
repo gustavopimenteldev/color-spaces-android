@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Color Spaces</string>
+    <string name="title_spaces">Spaces</string>
+    <string name="title_lights">Luzes</string>
+    <string name="title_palettes">Paletas</string>
+    <string name="title_guess">Adivinhar</string>
+    <string name="title_learn">Aprender</string>
+    <string name="select_color">Selecionar Cor</string>
+</resources>

@@ -7,4 +7,9 @@
     <string name="title_learn">Learn</string>
     <string name="initial_color" translatable="false">#555555</string>
     <string name="select_color">Select Color</string>
+    <string name="default_code">hexcode: #FFFFFF</string>
+    <string name="default_hue">Hue: 0</string>
+    <string name="default_saturation">Saturation: 0</string>
+    <string name="default_brightness">Brightness: 0</string>
+    <string name="default_luminosity">Luminosity: 0</string>
 </resources>

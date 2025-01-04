@@ -5,6 +5,9 @@ import android.graphics.*
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.AttributeSet
+import android.view.View
+import android.widget.TextView
+import com.example.colorspaces.R
 import kotlin.math.max
 import kotlin.math.min
 
@@ -16,11 +19,26 @@ class ColorPicker(context: Context, attributeSet: AttributeSet?) :
     private lateinit var colorShader: LinearGradient
     private lateinit var darknessShader: LinearGradient
 
+    private var dialogView: View? = null
+    private var hexCodeTextView: TextView? = null
+    private var hueTextView: TextView? = null
+    private var saturationTextView: TextView? = null
+    private var brightnessTextView: TextView? = null
+    private var luminosityTextView: TextView? = null
+    private var buttonView: TextView? = null
+
     private val hsvArray = FloatArray(3)
 
-    /**
-     * Hue value in color picker. Should be in range of 0 to 360.
-     */
+    fun setDialogView(view: View) {
+        this.dialogView = view
+        this.hexCodeTextView = view.findViewById(R.id.hex_code_text)
+        this.hueTextView = view.findViewById(R.id.tv_hue)
+        this.saturationTextView = view.findViewById(R.id.tv_saturation)
+        this.brightnessTextView = view.findViewById(R.id.tv_brightness)
+        this.luminosityTextView = view.findViewById(R.id.tv_luminosity)
+        this.buttonView = view.findViewById(R.id.btn_select_color)
+    }
+
     private var hue = 30
         set(value) {
             if (value < 0f || value > 360f) {
@@ -46,7 +64,7 @@ class ColorPicker(context: Context, attributeSet: AttributeSet?) :
                 field = value
                 this.hue = value.hue.toInt()
 
-                value.setOnHueChangedListener { hue, argbColor ->
+                value.setOnHueChangedListener { hue, _ ->
                     this.hue = hue.toInt()
                 }
             }
@@ -116,15 +134,6 @@ class ColorPicker(context: Context, attributeSet: AttributeSet?) :
             circleX = ((widthF - drawingStart) * fx) + drawingStart
             circleY = ((heightF - drawingTop) * fy) + drawingTop
         }
-    }
-
-    private fun calculateColor(ex: Float, ey: Float) {
-        hsvArray[0] = hue.toFloat()
-        hsvArray[1] = (ex - drawingStart) / (widthF - drawingStart)
-        hsvArray[2] = 1f - ((ey - drawingTop) / (heightF - drawingTop))
-
-        color = Color.HSVToColor(hsvArray)
-        callListeners()
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -199,9 +208,39 @@ class ColorPicker(context: Context, attributeSet: AttributeSet?) :
         super.onRestoreInstanceState(state)
     }
 
+    private fun calculateColor(ex: Float, ey: Float) {
+        hsvArray[0] = hue.toFloat()
+        hsvArray[1] = (ex - drawingStart) / (widthF - drawingStart)
+        hsvArray[2] = 1f - ((ey - drawingTop) / (heightF - drawingTop))
+
+        color = Color.HSVToColor(hsvArray)
+        callListeners()
+    }
+
     private fun callListeners() {
         onColorChanged?.invoke(color)
         onColorChangedListener?.onColorChanged(color)
+
+        buttonView?.setBackgroundColor(color)
+        buttonView?.setTextColor(getContrastColor(color))
+
+        hexCodeTextView?.text = "Hex: ${String.format("#%06X", 0xFFFFFF and color)}"
+        hueTextView?.text = "Hue: ${hsvArray[0].toInt()}"
+        saturationTextView?.text = "Saturation: ${String.format("%.2f", hsvArray[1] * 100)}%"
+        brightnessTextView?.text = "Brightness: ${String.format("%.2f", hsvArray[2] * 100)}%"
+        luminosityTextView?.text = "Luminosity: ${String.format("%.2f", calculateLuminosity(color))}%"
+    }
+
+    private fun calculateLuminosity(color: Int): Double {
+        val red = Color.red(color) / 255f
+        val green = Color.green(color) / 255f
+        val blue = Color.blue(color) / 255f
+        return (0.2126 * red + 0.7152 * green + 0.0722 * blue) * 100
+    }
+
+    private fun getContrastColor(color: Int): Int {
+        val luminance = calculateLuminosity(color) / 100
+        return if (luminance > 0.5) Color.BLACK else Color.WHITE
     }
 
     interface OnColorChangedListener {
@@ -211,6 +250,5 @@ class ColorPicker(context: Context, attributeSet: AttributeSet?) :
     companion object {
         private const val HUE_KEY = "hue"
     }
-
 
 }

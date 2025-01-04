@@ -3,7 +3,58 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@color/dark"
     android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_hex_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        android:hint="Hex: #FFFFFF"
+        android:maxLength="7"
+        android:background="@android:color/transparent"
+        />
+
+    <TextView
+        android:id="@+id/tv_hue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/default_hue" />
+
+    <TextView
+        android:id="@+id/tv_saturation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/default_saturation" />
+
+    <TextView
+        android:id="@+id/tv_brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/default_brightness" />
+
+    <TextView
+        android:id="@+id/tv_luminosity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/default_luminosity" />
 
     <com.example.colorspaces.ui.colorpicker.ColorPicker
         android:id="@+id/color_picker"
@@ -21,5 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/select_color" />
+        android:text="@string/select_color"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>

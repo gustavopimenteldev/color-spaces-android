@@ -3,6 +3,7 @@ package com.example.colorspaces.ui.spaces
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Color.rgb
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
@@ -22,7 +23,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-//TODO: add slider for brightness, in the selector box add a text input that also changes dynamically, in the selected box, add hue, brightness, saturation and luminosity information
+//TODO: in the selected box, add hue, brightness, saturation and luminosity information
 class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -43,6 +44,12 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
     private var isHoldPress = false
 
     private val cornerColors = mutableListOf(Color.RED, Color.GREEN, Color.BLUE)
+
+    var isSubtractiveMixing: Boolean = false
+        set(value) {
+            field = value
+            recalculateHexColors()
+        }
 
     init {
         paint.style = Paint.Style.FILL
@@ -99,10 +106,19 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
 
                 val (weight1, weight2, weight3) = calculateColorValue(hex.q, hex.r)
 
-                val color1 = scaleColor(cornerColors[0], weight1)
-                val color2 = scaleColor(cornerColors[1], weight2)
-                val color3 = scaleColor(cornerColors[2], weight3)
-                val finalColor = addColors(color1, color2, color3)
+                val finalColor = if (isSubtractiveMixing) {
+                    val color1 = scaleColorSubtraction(cornerColors[0], weight1)
+                    val color2 = scaleColorSubtraction(cornerColors[1], weight2)
+                    val color3 = scaleColorSubtraction(cornerColors[2], weight3)
+
+                    subtractColors(color1, color2, color3)
+                } else {
+                    val color1 = scaleColor(cornerColors[0], weight1)
+                    val color2 = scaleColor(cornerColors[1], weight2)
+                    val color3 = scaleColor(cornerColors[2], weight3)
+
+                    addColors(color1, color2, color3)
+                }
 
                 hex.color = finalColor
             }
@@ -209,6 +225,7 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
         val hueSlider = dialogView.findViewById<HueSlider>(R.id.hue_slider)
         val selectButton = dialogView.findViewById<Button>(R.id.btn_select_color)
 
+        colorPicker.setDialogView(dialogView)
         colorPicker.hueSliderView = hueSlider
 
         val dialog = AlertDialog.Builder(context)
@@ -269,14 +286,47 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
         val green = (Color.green(baseColor) * proportion).toInt().coerceIn(0, 255)
         val blue = (Color.blue(baseColor) * proportion).toInt().coerceIn(0, 255)
 
-        return Color.rgb(red, green, blue)
+        return rgb(red, green, blue)
+    }
+
+    private fun scaleColorSubtraction(baseColor: Int, proportion: Double): Int {
+        require(proportion in 0.0..1.0) { "Proportion must be between 0 and 1" }
+
+        val red = (Color.red(baseColor) * proportion + (1 - proportion) * 255).toInt().coerceIn(0, 255)
+        val green = (Color.green(baseColor) * proportion + (1 - proportion) * 255).toInt().coerceIn(0, 255)
+        val blue = (Color.blue(baseColor) * proportion + (1 - proportion) * 255).toInt().coerceIn(0, 255)
+
+        return rgb(red, green, blue)
     }
 
     private fun addColors(color1: Int, color2: Int, color3: Int): Int {
-        val red = (Color.red(color1) + Color.red(color2) + Color.red(color3)).coerceAtMost(255)
-        val green = (Color.green(color1) + Color.green(color2) + Color.green(color3)).coerceAtMost(255)
-        val blue = (Color.blue(color1) + Color.blue(color2) + Color.blue(color3)).coerceAtMost(255)
+        fun addBasedOnRemaining(vararg values: Int): Int {
+            var remaining = 255.0
+            var result = 0.0
 
-        return Color.rgb(red, green, blue)
+            for (value in values) {
+                val contribution = (value / 255.0) * remaining
+                result += contribution
+                remaining -= contribution
+                if (remaining <= 0) break
+            }
+
+            return result.coerceAtMost(255.0).toInt()
+        }
+
+        val red = addBasedOnRemaining(Color.red(color1), Color.red(color2), Color.red(color3))
+        val green = addBasedOnRemaining(Color.green(color1), Color.green(color2), Color.green(color3))
+        val blue = addBasedOnRemaining(Color.blue(color1), Color.blue(color2), Color.blue(color3))
+
+        return rgb(red, green, blue)
     }
+
+    private fun subtractColors(color1: Int, color2: Int, color3: Int): Int {
+        val red = minOf(Color.red(color1), Color.red(color2), Color.red(color3))
+        val green = minOf(Color.green(color1), Color.green(color2), Color.green(color3))
+        val blue = minOf(Color.blue(color1), Color.blue(color2), Color.blue(color3))
+
+        return rgb(red, green, blue)
+    }
+
 }

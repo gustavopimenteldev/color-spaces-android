@@ -1,1 +1,8 @@
-local.properties
+/local.properties
+/secrets.properties
+
+*.iml
+/.gradle/
+/build/
+/.idea/
+/*.apk

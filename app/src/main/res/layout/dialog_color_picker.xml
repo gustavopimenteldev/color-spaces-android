@@ -6,19 +6,15 @@
     android:background="@color/dark"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/et_hex_code"
+    <TextView
+        android:id="@+id/tv_hex_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:inputType="text"
-        android:hint="Hex: #FFFFFF"
-        android:maxLength="7"
-        android:background="@android:color/transparent"
-        />
+        android:text="@string/default_code" />
 
     <TextView
         android:id="@+id/tv_hue"
@@ -56,12 +52,12 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/default_luminosity" />
 
-    <com.example.colorspaces.ui.colorpicker.ColorPicker
+    <com.gustavopimentel.colorspaces.ui.colorpicker.ColorPicker
         android:id="@+id/color_picker"
         android:layout_width="match_parent"
         android:layout_height="320dp" />
 
-    <com.example.colorspaces.ui.colorpicker.HueSlider
+    <com.gustavopimentel.colorspaces.ui.colorpicker.HueSlider
         android:id="@+id/hue_slider"
         android:layout_width="match_parent"
         android:layout_height="40dp"

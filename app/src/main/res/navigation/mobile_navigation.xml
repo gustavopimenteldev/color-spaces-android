@@ -2,36 +2,29 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_spaces">
 
     <fragment
         android:id="@+id/navigation_spaces"
-        android:name="com.example.colorspaces.ui.spaces.SpacesFragment"
+        android:name="com.gustavopimentel.colorspaces.ui.spaces.SpacesFragment"
         android:label="@string/title_spaces"
         tools:layout="@layout/fragment_spaces" />
 
     <fragment
-        android:id="@+id/navigation_palettes"
-        android:name="com.example.colorspaces.ui.palettes.PalettesFragment"
-        android:label="@string/title_palettes"
-        tools:layout="@layout/fragment_palettes" />
-
-    <fragment
         android:id="@+id/navigation_lights"
-        android:name="com.example.colorspaces.ui.lights.LightsFragment"
+        android:name="com.gustavopimentel.colorspaces.ui.lights.LightsFragment"
         android:label="@string/title_lights"
         tools:layout="@layout/fragment_lights" />
 
     <fragment
         android:id="@+id/navigation_guess"
-        android:name="com.example.colorspaces.ui.guess.GuessFragment"
+        android:name="com.gustavopimentel.colorspaces.ui.guess.GuessFragment"
         android:label="@string/title_guess"
         tools:layout="@layout/fragment_guess" />
 
     <fragment
-        android:id="@+id/navigation_learn"
-        android:name="com.example.colorspaces.ui.learn.LearnFragment"
-        android:label="@string/title_learn"
-        tools:layout="@layout/fragment_learn" />
+        android:id="@+id/navigation_about"
+        android:name="com.gustavopimentel.colorspaces.ui.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

@@ -2,9 +2,62 @@
     <string name="app_name">Color Spaces</string>
     <string name="title_spaces">Spaces</string>
     <string name="title_lights">Lights</string>
-    <string name="title_palettes">Palettes</string>
     <string name="title_guess">Guess</string>
-    <string name="title_learn">Learn</string>
     <string name="initial_color" translatable="false">#555555</string>
     <string name="select_color">Select Color</string>
+    <string name="default_code" translatable="false">hexcode: #FFFFFF</string>
+    <string name="default_hue" translatable="false">Hue: 0</string>
+    <string name="default_saturation" translatable="false">Saturation: 0</string>
+    <string name="default_brightness" translatable="false">Brightness: 0</string>
+    <string name="default_luminosity" translatable="false">Luminosity: 0</string>
+    <string name="title_about">About</string>
+    <string name="spaces_intro">In the Spaces tab, you can create a limited palette by defining three primary colors and choosing a mixing style: additive or subtractive.</string>
+    <string name="spaces_how_to">How to use:</string>
+    <string name="spaces_step1">Choose Primaries: Press and hold a highlighted hex to change its color.</string>
+    <string name="spaces_step2">The hex grid updates automatically to display the resulting color blends.</string>
+    <string name="spaces_step3">Click any hex to store its color in the bottom bar for easy reference.</string>
+    <string name="spaces_step4">You can save up to 10 personalized palettes and switch between them using the buttons above the grid.</string>
+    <string name="spaces_tips">Mixing Tips:</string>
+    <string name="spaces_tip1">Additive Mixing: Use darker primaries, as lighter ones can be too overwhelming.</string>
+    <string name="spaces_tip2">Subtractive Mixing: Use lighter primaries, as darker ones may overpower the palette.</string>
+    <string name="lights_intro">The Lights tab lets you explore how different colored materials react under various lighting conditions.</string>
+    <string name="lights_how_to">How to use:</string>
+    <string name="lights_step1">Change the Sphere’s Color: Click the button below the sphere.</string>
+    <string name="lights_step2">Adjust Light Colors: Tap the left or right lightbulb icons to select their colors.</string>
+    <string name="lights_step3">Turn Off the Right Light: Use the switch to disable the right light source.</string>
+    <string name="lights_step4">Pick Colors from the Sphere: Click anywhere on the sphere to get the exact color at that point.</string>
+    <string name="lights_how_it_works">How It Works:</string>
+    <string name="lights_detail1">The simulation is based on RGB light sources, meaning results may differ from monochromatic light.</string>
+    <string name="lights_detail2">The final color of the sphere depends on how light interacts with its surface, helping you understand **light diffusion and material behavior**.</string>
+    <string name="guess_intro">The Guess tab is a Wordle-like game where you have six tries to guess the hex code of the displayed color.</string>
+    <string name="guess_how_to">How to play:</string>
+    <string name="guess_step1">Each row represents a guess with three cells: Red (R), Green (G), and Blue (B).</string>
+    <string name="guess_step2">Type two hexadecimal characters (00 to FF) into each cell to form a color guess.</string>
+    <string name="guess_step3">When you finish a row, it is automatically submitted, and feedback is provided.</string>
+    <string name="guess_feedback">How feedback works:</string>
+    <string name="guess_correct">✅ Green Cell: Correct value!</string>
+    <string name="guess_lower">🔵 Blue Cell: Too low, increase this value.</string>
+    <string name="guess_higher">🔴 Red Cell: Too high, decrease this value.</string>
+    <string name="guess_win_lose">Winning &amp; Losing:</string>
+    <string name="guess_win">🎉 If you correctly guess the color, you win!</string>
+    <string name="guess_lose">❌ If you don’t guess it in six attempts, the correct hex code is revealed.</string>
+    <string name="about_intro">This app was created from my personal journey into color theory. Initially, I started studying colors to improve my drawing skills, but I quickly became fascinated by how colors interact, blend, and influence perception.</string>
+    <string name="about_why">Why I made this app:</string>
+    <string name="about_reason1">I wanted to build a tool to help visual artists, designers, and anyone interested in color theory experiment with color relationships in an intuitive way.</string>
+    <string name="about_reason2">It was also an opportunity to improve my Android development skills by applying modern concepts like Jetpack Compose, MVVM architecture, and data persistence.</string>
+    <string name="about_features">What you can do here:</string>
+    <string name="about_feature1">🎨 Spaces Tab: Create custom palettes by mixing colors in additive or subtractive modes.</string>
+    <string name="about_feature2">💡 Lights Tab: Experiment with how different light sources affect materials and colors.</string>
+    <string name="about_feature3">🎯 Guess Tab: Play a Wordle-like game to sharpen your ability to recognize and work with color hex codes.</string>
+    <string name="hex_code">Hex: %1$s</string>
+    <string name="hue">Hue: %1$d</string>
+    <string name="saturation">Saturation: %d%%</string>
+    <string name="brightness">Brightness: %d%%</string>
+    <string name="luminosity">Luminosity: %d%%</string>
+    <string name="guess_the_color">Guess the color!</string>
+    <string name="retry">Retry</string>
+    <string name="game_win">🎉 Correct! You guessed the color!</string>
+    <string name="game_lose">❌ The color was %1$s</string>
+    <string name="game_feedback_start">Guess the color!</string>
+    <string name="app_version">version: </string>
 </resources>

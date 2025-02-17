@@ -7,11 +7,6 @@
         android:title="@string/title_spaces" />
 
     <item
-        android:id="@+id/navigation_palettes"
-        android:icon="@drawable/ic_palettes_24"
-        android:title="@string/title_palettes" />
-
-    <item
         android:id="@+id/navigation_lights"
         android:icon="@drawable/ic_lights_24"
         android:title="@string/title_lights" />
@@ -22,7 +17,7 @@
         android:title="@string/title_guess" />
 
     <item
-        android:id="@+id/navigation_learn"
-        android:icon="@drawable/ic_learn_24"
-        android:title="@string/title_learn" />
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/title_about" />
 </menu>

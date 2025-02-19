@@ -1,8 +1,16 @@
-/local.properties
-/secrets.properties
+local.properties
+secrets.properties
+keystore.jks
 
 *.iml
-/.gradle/
-/build/
-/.idea/
-/*.apk
+.gradle/
+build/
+.idea/
+
+/app/build/
+*.apk
+*.aab
+*.dex
+
+hs_err_pid*
+replay_pid*

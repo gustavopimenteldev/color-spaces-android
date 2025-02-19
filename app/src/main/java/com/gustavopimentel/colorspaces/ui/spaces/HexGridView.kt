@@ -28,7 +28,7 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val hexPath = Path()
-    private val hexRadius = 70f
+    private var hexRadius = 60f
     private val hexGrid = mutableListOf<MutableList<HexCell>>()
     private val side = 4
 
@@ -74,6 +74,8 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
     )
 
     private fun setupHexGrid() {
+        hexGrid.clear()
+
         val rows = 2 * side - 1
         val dx = 2f * hexRadius
         val dy = 1.7f * hexRadius
@@ -101,8 +103,9 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
             hexGrid.add(rowList)
         }
 
-        gridWidth = maxX - minX
         gridHeight = rows * dy
+        gridWidth = gridHeight
+
 
         recalculateHexColors()
     }
@@ -137,9 +140,17 @@ class HexGridView(context: Context, attrs: AttributeSet?) : View(context, attrs)
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
 
-        xOffset = (width - gridWidth) / 2f - minX
+        val maxAllowedWidth = w * 0.9f
+        val maxAllowedHeight = h * 0.7f
 
-        yOffset = (height - gridHeight) / 2f
+        hexRadius = minOf(maxAllowedWidth / (side * 2.5f), maxAllowedHeight / (side * 2.5f)).coerceIn(40f, 70f)
+
+        setupHexGrid()
+
+        xOffset = (w - gridWidth) / 2f - 1.2f*minX
+        yOffset = (h - gridHeight) / 2f
+
+        invalidate()
     }
 
     override fun onDraw(canvas: Canvas) {

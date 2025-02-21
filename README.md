@@ -42,7 +42,6 @@ I developed this app as a way to **deepen my knowledge of Android development**,
 - **Canvas & Custom Views** - Used to create the **Hex Grid** and **Sphere Lighting simulations**.
 - **SharedPreferences** - For saving and loading custom palettes.
 - **Material 3 (M3)** - For a **modern, responsive UI**.
-- **ProGuard / R8** - Optimized for **small APK size**.
 
 ---
 

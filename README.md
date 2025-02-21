@@ -52,7 +52,15 @@ The **color picker** used in this app is a **modified version** of [KavehColorPi
 ---
 
 ## 📷 Screenshots
-![Screenshot_2025-02-18-19-22-14-651_com example colorspaces](https://github.com/user-attachments/assets/2e5eae51-834d-46de-a33b-813c1218404c) | ![Screenshot_2025-02-18-19-22-20-047_com example colorspaces](https://github.com/user-attachments/assets/f9a5336c-fa4d-4360-abc6-a15574473c9f) | ![Screenshot_2025-02-18-19-22-30-294_com example colorspaces](https://github.com/user-attachments/assets/844a8f96-b9e8-43d3-9e90-6e494dd031cf) | ![Screenshot_2025-02-18-19-23-30-332_com example colorspaces](https://github.com/user-attachments/assets/d8ead8ec-5c55-4f52-befa-feac929ea8e4) | ![Screenshot_2025-02-18-19-23-42-942_com example colorspaces](https://github.com/user-attachments/assets/bb7cc9c4-8787-4be4-8179-fffdc1d17cb9) | ![Screenshot_2025-02-18-19-30-04-895_com example colorspaces](https://github.com/user-attachments/assets/695a272e-ddb1-47e1-9a07-6d43b353ade1) | ![Screenshot_2025-02-18-19-25-13-439_com example colorspaces](https://github.com/user-attachments/assets/e12e45d9-e822-4e39-8d81-afb4b5bf562d) | ![Screenshot_2025-02-18-19-25-10-940_com example colorspaces](https://github.com/user-attachments/assets/e5cd81f0-5098-4201-b29e-7f92be943ae9)
+
+<img src="https://github.com/user-attachments/assets/2e5eae51-834d-46de-a33b-813c1218404c" width="300"> 
+<img src="https://github.com/user-attachments/assets/f9a5336c-fa4d-4360-abc6-a15574473c9f" width="300"> 
+<img src="https://github.com/user-attachments/assets/844a8f96-b9e8-43d3-9e90-6e494dd031cf" width="300"> 
+<img src="https://github.com/user-attachments/assets/d8ead8ec-5c55-4f52-befa-feac929ea8e4" width="300"> 
+<img src="https://github.com/user-attachments/assets/bb7cc9c4-8787-4be4-8179-fffdc1d17cb9" width="300"> 
+<img src="https://github.com/user-attachments/assets/695a272e-ddb1-47e1-9a07-6d43b353ade1" width="300"> 
+<img src="https://github.com/user-attachments/assets/e12e45d9-e822-4e39-8d81-afb4b5bf562d" width="300"> 
+<img src="https://github.com/user-attachments/assets/e5cd81f0-5098-4201-b29e-7f92be943ae9" width="300"> 
 
 ---
 
@@ -95,7 +103,7 @@ Desenvolvi este aplicativo como uma forma de **aprofundar meus conhecimentos em 
 ---
 
 ## ✨ Funcionalidades
-### 🎨 **Espaços**  
+### 🎨 **Spaces**  
 - Crie uma **paleta de cores** misturando três cores primárias.
 - Escolha entre os modelos **aditivo** (mistura de luz) e **subtrativo** (mistura de pigmento).
 - Salve e carregue até **10 paletas personalizadas**.
@@ -106,7 +114,7 @@ Desenvolvi este aplicativo como uma forma de **aprofundar meus conhecimentos em 
 - Ajuste dinamicamente a **cor da esfera** e as **cores das fontes de luz**.
 - Clique em qualquer lugar da esfera para **obter a cor exata** desse ponto.
 
-### 🎯 **Adivinhação**  
+### 🎯 **Adivinhar**  
 - Um jogo inspirado no **Wordle**, onde você **tenta adivinhar o código hexadecimal** de uma cor em 6 tentativas.
 - Cada célula corresponde aos valores **Vermelho (R), Verde (G) e Azul (B)**.
 - Indicadores de feedback:
@@ -124,7 +132,6 @@ Desenvolvi este aplicativo como uma forma de **aprofundar meus conhecimentos em 
 - **Canvas & Visualização Customizada** - Criados para a **Grade Hexagonal** e simulação de **Iluminação da Esfera**.
 - **SharedPreferences** - Para salvar e carregar paletas personalizadas.
 - **Material 3 (M3)** - Para uma **UI moderna e responsiva**.
-- **ProGuard / R8** - Otimização para **redução do tamanho do APK**.
 
 ---
 
@@ -134,7 +141,14 @@ O **seletor de cores** usado neste aplicativo é uma **versão modificada** do [
 ---
 
 ## 📷 Capturas de Tela
-![Screenshot_2025-02-18-19-22-14-651_com example colorspaces](https://github.com/user-attachments/assets/2e5eae51-834d-46de-a33b-813c1218404c) | ![Screenshot_2025-02-18-19-22-20-047_com example colorspaces](https://github.com/user-attachments/assets/f9a5336c-fa4d-4360-abc6-a15574473c9f) | ![Screenshot_2025-02-18-19-22-30-294_com example colorspaces](https://github.com/user-attachments/assets/844a8f96-b9e8-43d3-9e90-6e494dd031cf) | ![Screenshot_2025-02-18-19-23-30-332_com example colorspaces](https://github.com/user-attachments/assets/d8ead8ec-5c55-4f52-befa-feac929ea8e4) | ![Screenshot_2025-02-18-19-23-42-942_com example colorspaces](https://github.com/user-attachments/assets/bb7cc9c4-8787-4be4-8179-fffdc1d17cb9) | ![Screenshot_2025-02-18-19-30-04-895_com example colorspaces](https://github.com/user-attachments/assets/695a272e-ddb1-47e1-9a07-6d43b353ade1) | ![Screenshot_2025-02-18-19-25-13-439_com example colorspaces](https://github.com/user-attachments/assets/e12e45d9-e822-4e39-8d81-afb4b5bf562d) | ![Screenshot_2025-02-18-19-25-10-940_com example colorspaces](https://github.com/user-attachments/assets/e5cd81f0-5098-4201-b29e-7f92be943ae9)
+<img src="https://github.com/user-attachments/assets/2e5eae51-834d-46de-a33b-813c1218404c" width="300"> 
+<img src="https://github.com/user-attachments/assets/f9a5336c-fa4d-4360-abc6-a15574473c9f" width="300"> 
+<img src="https://github.com/user-attachments/assets/844a8f96-b9e8-43d3-9e90-6e494dd031cf" width="300"> 
+<img src="https://github.com/user-attachments/assets/d8ead8ec-5c55-4f52-befa-feac929ea8e4" width="300"> 
+<img src="https://github.com/user-attachments/assets/bb7cc9c4-8787-4be4-8179-fffdc1d17cb9" width="300"> 
+<img src="https://github.com/user-attachments/assets/695a272e-ddb1-47e1-9a07-6d43b353ade1" width="300"> 
+<img src="https://github.com/user-attachments/assets/e12e45d9-e822-4e39-8d81-afb4b5bf562d" width="300"> 
+<img src="https://github.com/user-attachments/assets/e5cd81f0-5098-4201-b29e-7f92be943ae9" width="300"> 
 
 ---
 

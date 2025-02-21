@@ -10,7 +10,6 @@ This project was built using **Jetpack Compose** and follows the **MVVM architec
 
 I developed this app as a way to **deepen my knowledge of Android development**, color theory, and **UI/UX design**, while also exploring advanced concepts such as **custom views and graphics rendering**.
 
-[⬆ Back to Top](#-color-spaces) | [🇧🇷 Switch to Portuguese](#-sobre-o-projeto)
 ---
 
 ## ✨ Features
@@ -83,6 +82,8 @@ If you're interested in my work, feel free to connect:
 🔗 LinkedIn: www.linkedin.com/in/gustavo-pimentel-00b068210
 🐙 GitHub: https://github.com/gustavopimenteldev/
 
+[⬆ Back to Top](#-color-spaces) | [🇧🇷 Switch to Portuguese](#-sobre-o-projeto)
+
 
 ## 📌 Sobre o Projeto
 **Color Spaces** é um **aplicativo Android** que permite aos usuários experimentarem a teoria das cores por meio de **mistura de paletas, simulação de luz e um jogo de adivinhação de cores**.
@@ -91,7 +92,6 @@ Este projeto foi desenvolvido utilizando **Jetpack Compose** e segue a arquitetu
 
 Desenvolvi este aplicativo como uma forma de **aprofundar meus conhecimentos em desenvolvimento Android**, teoria das cores e **design UI/UX**, enquanto explorava conceitos avançados, como **visualização customizada e renderização de gráficos**.
 
-[⬆ Voltar ao Topo](#-sobre-o-projeto) | [🇺🇸 Mudar para Inglês](#-about-the-project)
 ---
 
 ## ✨ Funcionalidades
@@ -162,3 +162,5 @@ Se estiver interessado no meu trabalho, sinta-se à vontade para entrar em conta
 📧 Email: gustavo.pimentel.dev@gmail.com  
 🔗 LinkedIn: www.linkedin.com/in/gustavo-pimentel-00b068210  
 🐙 GitHub: https://github.com/gustavopimenteldev  
+
+[⬆ Voltar ao Topo](#-sobre-o-projeto) | [🇺🇸 Mudar para Inglês](#-about-the-project)

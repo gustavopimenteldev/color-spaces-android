@@ -95,7 +95,7 @@ If you're interested in my work, feel free to connect:
 ## 📌 Sobre o Projeto
 **Color Spaces** é um **aplicativo Android** que permite aos usuários experimentarem a teoria das cores por meio de **mistura de paletas, simulação de luz e um jogo de adivinhação de cores**.
 
-Este projeto foi desenvolvido utilizando **Jetpack Compose** e segue a arquitetura **MVVM**, tornando-o um aplicativo Android **moderno, escalável e mantével**.
+Este projeto foi desenvolvido utilizando **Jetpack Compose** e segue a arquitetura **MVVM**, tornando-o um aplicativo Android **moderno, escalável e simples de manter**.
 
 Desenvolvi este aplicativo como uma forma de **aprofundar meus conhecimentos em desenvolvimento Android**, teoria das cores e **design UI/UX**, enquanto explorava conceitos avançados, como **visualização customizada e renderização de gráficos**.
 
